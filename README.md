@@ -1,2 +1,2 @@
 # Mobile-projects
-Projects mobile 
+Projects mobiles
