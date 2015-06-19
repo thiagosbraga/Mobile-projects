@@ -11,6 +11,8 @@
 		BF17FB911B2B48D6007D19C2 /* launch_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = BF17FB8F1B2B48D6007D19C2 /* launch_iphone.png */; };
 		BF1B3BDB1B21EABE000BED6B /* produban-logo-.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1B3BD91B21EABE000BED6B /* produban-logo-.png */; };
 		BF1B3BDC1B21EABE000BED6B /* Logo_BancoSantander.png in Resources */ = {isa = PBXBuildFile; fileRef = BF1B3BDA1B21EABE000BED6B /* Logo_BancoSantander.png */; };
+		BF2121A81B3453A100A5D126 /* UIColor+MobileColors.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2121A71B3453A100A5D126 /* UIColor+MobileColors.m */; };
+		BF2121AB1B3453B600A5D126 /* OTPAuthBarClock.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2121AA1B3453B600A5D126 /* OTPAuthBarClock.m */; };
 		BF257C081B175682001FA169 /* TPPropertyAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257C051B175682001FA169 /* TPPropertyAnimation.m */; };
 		BF257C091B175682001FA169 /* KAProgressLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257C071B175682001FA169 /* KAProgressLabel.m */; };
 		BF43D2611B260E1F00D4B1AC /* OTPDao.m in Sources */ = {isa = PBXBuildFile; fileRef = BF43D2601B260E1F00D4B1AC /* OTPDao.m */; };
@@ -24,6 +26,10 @@
 		BF43D2821B261C9500D4B1AC /* OTPGen.m in Sources */ = {isa = PBXBuildFile; fileRef = BF43D2811B261C9500D4B1AC /* OTPGen.m */; };
 		BF466A591B1646E60004DCFC /* QrCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF466A571B1646E60004DCFC /* QrCodeViewController.m */; };
 		BF466A5A1B1646E60004DCFC /* QrCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF466A581B1646E60004DCFC /* QrCodeViewController.xib */; };
+		BF4D96C61B33253F00456B61 /* OTPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4D96C41B33253F00456B61 /* OTPTableViewController.m */; };
+		BF4D96C71B33253F00456B61 /* OTPTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4D96C51B33253F00456B61 /* OTPTableViewController.xib */; };
+		BF4D96CC1B3326E700456B61 /* OTPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4D96CA1B3326E700456B61 /* OTPTableViewCell.m */; };
+		BF4D96CD1B3326E700456B61 /* OTPTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4D96CB1B3326E700456B61 /* OTPTableViewCell.xib */; };
 		BF554B1E1B14F29E00FB2EEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF554B1D1B14F29E00FB2EEE /* Foundation.framework */; };
 		BF554B201B14F29E00FB2EEE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF554B1F1B14F29E00FB2EEE /* CoreGraphics.framework */; };
 		BF554B221B14F29E00FB2EEE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF554B211B14F29E00FB2EEE /* UIKit.framework */; };
@@ -45,6 +51,7 @@
 		BF554B601B14F64000FB2EEE /* OTPGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BF554B5B1B14F64000FB2EEE /* OTPGenerator.m */; };
 		BF554B611B14F64000FB2EEE /* TOTPGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BF554B5D1B14F64000FB2EEE /* TOTPGenerator.m */; };
 		BF554B621B14F64000FB2EEE /* MF_Base32Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF554B5F1B14F64000FB2EEE /* MF_Base32Additions.m */; };
+		BFAA1BC81B31FA1F0040B13F /* copiar.png in Resources */ = {isa = PBXBuildFile; fileRef = BFAA1BC71B31FA1F0040B13F /* copiar.png */; };
 		BFB8493C1B28C4B700214B7B /* produban-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB8493B1B28C4B700214B7B /* produban-logo.png */; };
 		BFB849401B28D7BB00214B7B /* logo-60.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB8493D1B28D7BB00214B7B /* logo-60.png */; };
 		BFB849411B28D7BB00214B7B /* logo-40.png in Resources */ = {isa = PBXBuildFile; fileRef = BFB8493E1B28D7BB00214B7B /* logo-40.png */; };
@@ -70,6 +77,10 @@
 		BF17FB8F1B2B48D6007D19C2 /* launch_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch_iphone.png; sourceTree = "<group>"; };
 		BF1B3BD91B21EABE000BED6B /* produban-logo-.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "produban-logo-.png"; sourceTree = "<group>"; };
 		BF1B3BDA1B21EABE000BED6B /* Logo_BancoSantander.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_BancoSantander.png; sourceTree = "<group>"; };
+		BF2121A61B3453A100A5D126 /* UIColor+MobileColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MobileColors.h"; sourceTree = "<group>"; };
+		BF2121A71B3453A100A5D126 /* UIColor+MobileColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MobileColors.m"; sourceTree = "<group>"; };
+		BF2121A91B3453B600A5D126 /* OTPAuthBarClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPAuthBarClock.h; sourceTree = "<group>"; };
+		BF2121AA1B3453B600A5D126 /* OTPAuthBarClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPAuthBarClock.m; sourceTree = "<group>"; };
 		BF257C041B175682001FA169 /* TPPropertyAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPPropertyAnimation.h; sourceTree = "<group>"; };
 		BF257C051B175682001FA169 /* TPPropertyAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPPropertyAnimation.m; sourceTree = "<group>"; };
 		BF257C061B175682001FA169 /* KAProgressLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAProgressLabel.h; sourceTree = "<group>"; };
@@ -97,6 +108,12 @@
 		BF466A571B1646E60004DCFC /* QrCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QrCodeViewController.m; sourceTree = "<group>"; };
 		BF466A581B1646E60004DCFC /* QrCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QrCodeViewController.xib; sourceTree = "<group>"; };
 		BF466A5B1B1649A10004DCFC /* QrCodeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QrCodeDelegate.h; sourceTree = "<group>"; };
+		BF4D96C31B33253F00456B61 /* OTPTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OTPTableViewController.h; path = ../OTPTableViewController.h; sourceTree = "<group>"; };
+		BF4D96C41B33253F00456B61 /* OTPTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OTPTableViewController.m; path = ../OTPTableViewController.m; sourceTree = "<group>"; };
+		BF4D96C51B33253F00456B61 /* OTPTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OTPTableViewController.xib; path = ../OTPTableViewController.xib; sourceTree = "<group>"; };
+		BF4D96C91B3326E700456B61 /* OTPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPTableViewCell.h; sourceTree = "<group>"; };
+		BF4D96CA1B3326E700456B61 /* OTPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPTableViewCell.m; sourceTree = "<group>"; };
+		BF4D96CB1B3326E700456B61 /* OTPTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OTPTableViewCell.xib; sourceTree = "<group>"; };
 		BF554B1A1B14F29E00FB2EEE /* OTP-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OTP-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF554B1D1B14F29E00FB2EEE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BF554B1F1B14F29E00FB2EEE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,9 +132,9 @@
 		BF554B441B14F29E00FB2EEE /* OTP-TestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OTP-TestTests-Info.plist"; sourceTree = "<group>"; };
 		BF554B461B14F29E00FB2EEE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BF554B481B14F29E00FB2EEE /* OTP_TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTP_TestTests.m; sourceTree = "<group>"; };
-		BF554B531B14F2DE00FB2EEE /* OtpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtpViewController.h; sourceTree = "<group>"; };
-		BF554B541B14F2DE00FB2EEE /* OtpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtpViewController.m; sourceTree = "<group>"; };
-		BF554B551B14F2DE00FB2EEE /* OtpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtpViewController.xib; sourceTree = "<group>"; };
+		BF554B531B14F2DE00FB2EEE /* OtpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OtpViewController.h; path = "OTP-Test/OtpViewController.h"; sourceTree = "<group>"; };
+		BF554B541B14F2DE00FB2EEE /* OtpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OtpViewController.m; path = "OTP-Test/OtpViewController.m"; sourceTree = "<group>"; };
+		BF554B551B14F2DE00FB2EEE /* OtpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OtpViewController.xib; path = "OTP-Test/OtpViewController.xib"; sourceTree = "<group>"; };
 		BF554B581B14F3C500FB2EEE /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		BF554B5A1B14F64000FB2EEE /* OTPGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPGenerator.h; sourceTree = "<group>"; };
 		BF554B5B1B14F64000FB2EEE /* OTPGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTPGenerator.m; sourceTree = "<group>"; };
@@ -125,6 +142,7 @@
 		BF554B5D1B14F64000FB2EEE /* TOTPGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOTPGenerator.m; sourceTree = "<group>"; };
 		BF554B5E1B14F64000FB2EEE /* MF_Base32Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MF_Base32Additions.h; sourceTree = "<group>"; };
 		BF554B5F1B14F64000FB2EEE /* MF_Base32Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MF_Base32Additions.m; sourceTree = "<group>"; };
+		BFAA1BC71B31FA1F0040B13F /* copiar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = copiar.png; sourceTree = "<group>"; };
 		BFB8493B1B28C4B700214B7B /* produban-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "produban-logo.png"; sourceTree = "<group>"; };
 		BFB8493D1B28D7BB00214B7B /* logo-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-60.png"; sourceTree = "<group>"; };
 		BFB8493E1B28D7BB00214B7B /* logo-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-40.png"; sourceTree = "<group>"; };
@@ -161,6 +179,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF2121A51B34538900A5D126 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				BF2121A91B3453B600A5D126 /* OTPAuthBarClock.h */,
+				BF2121AA1B3453B600A5D126 /* OTPAuthBarClock.m */,
+				BF2121A61B3453A100A5D126 /* UIColor+MobileColors.h */,
+				BF2121A71B3453A100A5D126 /* UIColor+MobileColors.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		BF257C031B175662001FA169 /* ProgressView */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,9 +270,30 @@
 			name = OTPGen;
 			sourceTree = "<group>";
 		};
+		BF4D96C21B32F07900456B61 /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				BF554B531B14F2DE00FB2EEE /* OtpViewController.h */,
+				BF554B541B14F2DE00FB2EEE /* OtpViewController.m */,
+				BF554B551B14F2DE00FB2EEE /* OtpViewController.xib */,
+			);
+			name = Old;
+			sourceTree = "<group>";
+		};
+		BF4D96C81B3326C300456B61 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				BF4D96C91B3326E700456B61 /* OTPTableViewCell.h */,
+				BF4D96CA1B3326E700456B61 /* OTPTableViewCell.m */,
+				BF4D96CB1B3326E700456B61 /* OTPTableViewCell.xib */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
 		BF554B111B14F29E00FB2EEE = {
 			isa = PBXGroup;
 			children = (
+				BF4D96C21B32F07900456B61 /* Old */,
 				BF554B251B14F29E00FB2EEE /* OTP-Test */,
 				BF554B421B14F29E00FB2EEE /* OTP-TestTests */,
 				BF554B1C1B14F29E00FB2EEE /* Frameworks */,
@@ -275,6 +325,7 @@
 		BF554B251B14F29E00FB2EEE /* OTP-Test */ = {
 			isa = PBXGroup;
 			children = (
+				BFAA1BC71B31FA1F0040B13F /* copiar.png */,
 				BF17FB8E1B2B48D6007D19C2 /* launch_retina.png */,
 				BF17FB8F1B2B48D6007D19C2 /* launch_iphone.png */,
 				BFB849431B28DA0400214B7B /* logo-120.png */,
@@ -294,13 +345,13 @@
 				BF554B341B14F29E00FB2EEE /* Images.xcassets */,
 				BF554B311B14F29E00FB2EEE /* OTP_Test.xcdatamodeld */,
 				BF554B261B14F29E00FB2EEE /* Supporting Files */,
-				BF554B531B14F2DE00FB2EEE /* OtpViewController.h */,
-				BF554B541B14F2DE00FB2EEE /* OtpViewController.m */,
-				BF554B551B14F2DE00FB2EEE /* OtpViewController.xib */,
 				BF466A561B1646E60004DCFC /* QrCodeViewController.h */,
 				BF466A571B1646E60004DCFC /* QrCodeViewController.m */,
 				BF466A581B1646E60004DCFC /* QrCodeViewController.xib */,
 				BF466A5B1B1649A10004DCFC /* QrCodeDelegate.h */,
+				BF4D96C31B33253F00456B61 /* OTPTableViewController.h */,
+				BF4D96C41B33253F00456B61 /* OTPTableViewController.m */,
+				BF4D96C51B33253F00456B61 /* OTPTableViewController.xib */,
 			);
 			path = "OTP-Test";
 			sourceTree = "<group>";
@@ -337,6 +388,8 @@
 		BF554B521B14F2B300FB2EEE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BF2121A51B34538900A5D126 /* views */,
+				BF4D96C81B3326C300456B61 /* cell */,
 				BF43D26D1B26118700D4B1AC /* controller */,
 				BF43D2691B26109500D4B1AC /* OTPLibs */,
 				BF43D2651B260F9000D4B1AC /* model */,
@@ -431,12 +484,15 @@
 				BFB849401B28D7BB00214B7B /* logo-60.png in Resources */,
 				BF554B2A1B14F29E00FB2EEE /* InfoPlist.strings in Resources */,
 				BF554B571B14F2DE00FB2EEE /* OtpViewController.xib in Resources */,
+				BFAA1BC81B31FA1F0040B13F /* copiar.png in Resources */,
 				BF554B591B14F3C500FB2EEE /* bg.png in Resources */,
 				BFB849471B28DA0400214B7B /* logo-120.png in Resources */,
 				BF1B3BDB1B21EABE000BED6B /* produban-logo-.png in Resources */,
+				BF4D96CD1B3326E700456B61 /* OTPTableViewCell.xib in Resources */,
 				BF466A5A1B1646E60004DCFC /* QrCodeViewController.xib in Resources */,
 				BFB849481B28DA0400214B7B /* logo-80.png in Resources */,
 				BF554B351B14F29E00FB2EEE /* Images.xcassets in Resources */,
+				BF4D96C71B33253F00456B61 /* OTPTableViewController.xib in Resources */,
 				BFB849411B28D7BB00214B7B /* logo-40.png in Resources */,
 				BFB8494A1B28DA0400214B7B /* logo-96.png in Resources */,
 				BFB8493C1B28C4B700214B7B /* produban-logo.png in Resources */,
@@ -459,11 +515,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4D96CC1B3326E700456B61 /* OTPTableViewCell.m in Sources */,
+				BF2121A81B3453A100A5D126 /* UIColor+MobileColors.m in Sources */,
 				BF554B561B14F2DE00FB2EEE /* OtpViewController.m in Sources */,
+				BF4D96C61B33253F00456B61 /* OTPTableViewController.m in Sources */,
 				BF554B301B14F29E00FB2EEE /* AppDelegate.m in Sources */,
 				BF43D26C1B26116C00D4B1AC /* OTPController.m in Sources */,
 				BF554B601B14F64000FB2EEE /* OTPGenerator.m in Sources */,
 				BF43D2681B260F9F00D4B1AC /* OTP.m in Sources */,
+				BF2121AB1B3453B600A5D126 /* OTPAuthBarClock.m in Sources */,
 				BF43D27E1B26198100D4B1AC /* AGStringEncoding.m in Sources */,
 				BF257C081B175682001FA169 /* TPPropertyAnimation.m in Sources */,
 				BF554B2C1B14F29E00FB2EEE /* main.m in Sources */,

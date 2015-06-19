@@ -9,13 +9,18 @@
 #import <Foundation/Foundation.h>
 #import "IOTP.h"
 #import "TOTPGenerator.h"
+#import "OTP.h"
+#import "KAProgressLabel.h"
+#import "OTPTableViewCell.h"
+@interface OTPGen : NSObject
 
-@interface OTPGen : NSObject<IOTP>
 
-@property(strong)NSString * secret;
 @property(strong) TOTPGenerator *generator;
 
-- (id)initWithSecret:(NSString *)secret;
+
+- (id)initWithSecret:(NSManagedObject *)otpManModel andOTPTableViewCELL:(OTPTableViewCell *)cell;
+
+
 -(NSString *)generateToken;
 
 @end

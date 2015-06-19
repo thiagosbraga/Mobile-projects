@@ -15,9 +15,14 @@
 @property(strong) NSString *secret;
 @property(strong) NSString *user;
 @property(assign) BOOL hasKey;
+
 @end
 
 @implementation OtpViewController
+NSString *const OTPKeyValue = @"otpuri";
+NSString *const OTPTitleName = @"TOKEN OTP";
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -45,7 +50,7 @@
 
     self.viewCOunting.progressWidth = 5.0;        // Defaults to 5.0
     
-    self.title =@"TOKEN OTP";
+    self.title =OTPTitleName;
     UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(lerCodigo)];
 	self.navigationItem.rightBarButtonItem = refreshButton;
 
@@ -61,11 +66,11 @@
 
 - (IBAction)gerarSenha:(id)sender {
     
-    NSString * secret =[self getSecret];
+    NSDictionary * secretdict =[self getSecret];
     if (_hasKey) {
         [self showCounter];
         [self setContador];
-        [self generatePIN:secret];
+        [self generatePIN:secretdict];
     }else{
         [self hideCounter];
     }
@@ -115,9 +120,13 @@
 }
 
 
--(BOOL)generatePIN:(NSString *)psecret
+
+
+-(BOOL)generatePIN:(NSDictionary *)psecret
 {
-    NSString *secret = psecret;
+    NSString *secret = [psecret objectForKey:@"secret"];
+    NSString *algorithmdata = [psecret objectForKey:@"algorithm"];
+    algorithmdata = algorithmdata?algorithmdata:kOTPGeneratorSHA1Algorithm;
     NSString *pin;
     BOOL isvalid = NO;
     
@@ -128,7 +137,8 @@
         NSInteger period = 30;
         //NSTimeInterval timestamp = [self.timestampLabel.text integerValue];
         
-        TOTPGenerator *generator = [[TOTPGenerator alloc] initWithSecret:secretData algorithm:kOTPGeneratorSHA1Algorithm digits:digits period:period];
+        //TOTPGenerator *generator = [[TOTPGenerator alloc] initWithSecret:secretData algorithm:kOTPGeneratorSHA1Algorithm digits:digits period:period];
+        TOTPGenerator *generator = [[TOTPGenerator alloc] initWithSecret:secretData algorithm:algorithmdata digits:digits period:period];
         @try {
            pin = [generator generateOTPForDate:[NSDate date]];
             isvalid = YES;
@@ -151,17 +161,34 @@
 -(void)responseQrcodeData:(NSString *)data{
     
     NSLog(@"%@",data);
-    NSURL *url = [NSURL URLWithString:data];
-    NSString *var = [url query];
-    NSArray * array = [var componentsSeparatedByString:@"="];
-    NSString * secret = array[1];
+    //NSData *uri = data;
 
-    [self saveSecret:secret];
+    //NSString * secret = [[self otpURItoDictionary:data]objectForKey:OTPKeyValue];
+
+    [self saveSecret:[self otpURItoDictionary:data]];
     
 
 }
 
--(void) saveSecret:(NSString *)secret{
+-(NSDictionary *) otpURItoDictionary:(NSString *)otpUrl{
+    
+    if (!otpUrl) {
+        return nil;
+    }
+    NSMutableDictionary * dict = [[NSMutableDictionary alloc]init];
+    [dict setObject:otpUrl forKey:@"uri"];
+    NSURL *url = [NSURL URLWithString:otpUrl];
+    NSString *var = [url query];
+    NSArray * array =[var componentsSeparatedByString:@"&"];
+    for (NSString * dado in array) {
+        NSArray *partDado = [dado componentsSeparatedByString:@"="];
+        [dict setObject:partDado[1] forKey:partDado[0]];
+    }
+    
+    return dict;
+}
+
+-(void) saveSecret:(NSDictionary *)secret{
     
     if ([self generatePIN:secret]) {
         NSLog(@"%@",[NSString stringWithFormat:@"Erroooo"]);
@@ -172,36 +199,46 @@
     }
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    [prefs setObject:secret forKey:@"secret"];
+    [prefs setObject:[secret objectForKey:@"uri"] forKey:OTPKeyValue];
 }
 
 
--(NSString *)getSecret{
+-(NSDictionary *)getSecret{
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    NSString *data =[prefs stringForKey:@"secret"];
+    NSString *data =[prefs stringForKey:OTPKeyValue];
     if (data) {
         _hasKey= YES;
     }else{
         _hasKey=NO;
     }
     
-    return data;
+    return [self otpURItoDictionary:data];
 }
 
 -(void)showCounter{
     [_viewCOunting setHidden:NO];
     [_expireLabel setHidden:NO];
+    [_btnCopiar setHidden:NO];
     
 }
 
 -(void)hideCounter{
     [_viewCOunting setHidden:YES];
     [_expireLabel setHidden:YES];
+    [_btnCopiar setHidden:YES];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     
     return YES;
+}
+- (IBAction)copiarToken:(id)sender {
+    [UIPasteboard generalPasteboard].string = _lblOTP.text;
+    
+    NSString *otpCopiado = [UIPasteboard generalPasteboard].string;
+    
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"OTP-Test" message:[NSString stringWithFormat:@"Token %@ copiado",otpCopiado]  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 @end

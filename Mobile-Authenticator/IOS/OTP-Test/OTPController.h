@@ -7,11 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "OTP.h"
 @interface OTPController : NSObject
 
-//getAllToken
-//deleteCLientID
-//UpdateClientID
+
+
+-(bool)saveOTP:(NSString *)otp;
+
+-(NSMutableArray *)getAllOTOP;
+
+-(bool)deleteOTP:(NSManagedObject *)otp;
+
+-(bool)updateOTP:(OTP *)otp;
 
 @end

@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OtpViewController">
             <connections>
+                <outlet property="btnCopiar" destination="xSS-bc-vOE" id="oTf-7l-COG"/>
                 <outlet property="expireLabel" destination="IZu-R0-TAe" id="SAl-nL-Ol7"/>
                 <outlet property="lblOTP" destination="Tfc-7T-SF6" id="VN6-HZ-sAA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -66,6 +67,17 @@
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSS-bc-vOE">
+                            <rect key="frame" x="113" y="100" width="83" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Copiar" image="copiar.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="copiarToken:" destination="-1" eventType="touchUpInside" id="FXk-pY-CSn"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="centerX" secondItem="1Cc-gK-ivV" secondAttribute="centerX" id="7eh-mb-ijc"/>
@@ -89,6 +101,7 @@
         </view>
     </objects>
     <resources>
+        <image name="copiar.png" width="29" height="28"/>
         <image name="produban-logo.png" width="140" height="25"/>
     </resources>
 </document>

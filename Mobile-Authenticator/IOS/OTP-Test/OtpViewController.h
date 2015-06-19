@@ -15,7 +15,11 @@
 
 - (void)lerCodigo;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnCopiar;
 @property (weak, nonatomic) IBOutlet KAProgressLabel *viewCOunting;
 @property (weak, nonatomic) IBOutlet UILabel *expireLabel;
+
+- (IBAction)copiarToken:(id)sender;
+
 
 @end
